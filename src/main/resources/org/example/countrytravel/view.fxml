@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.countrytravel.CountryController" fx:id="rootVBox">
+    <children>
+        <HBox spacing="10" alignment="CENTER">
+            <children>
+                <TextField fx:id="searchField" promptText="Enter country name" />
+                <Button text="Search" onAction="#handleSearch"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER">
+            <children>
+                <ListView fx:id="countryListView" prefWidth="150"/>
+
+                <VBox fx:id="countryDetailsVBox" spacing="10" visible="false">
+                    <children>
+                        <ImageView fx:id="flagImageView" fitHeight="100" fitWidth="150"/>
+                        <Text fx:id="capitalText"/>
+                        <Text fx:id="regionText"/>
+                        <Text fx:id="subregionText"/>
+                        <Text fx:id="populationText"/>
+                    </children>
+                </VBox>
+
+                <VBox spacing="10">
+                    <ImageView fx:id="countryImageView" fitHeight="300" fitWidth="500"/>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
